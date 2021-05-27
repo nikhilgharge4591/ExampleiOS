@@ -16,8 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-Uk-jWH">
+                                <rect key="frame" x="8" y="52" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAY-X9-WL6">
+                                <rect key="frame" x="175" y="94" width="64" height="30"/>
+                                <state key="normal" title="Say Hello"/>
+                                <connections>
+                                    <action selector="helloButton_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJQ-J1-uZy"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-vO-UoA">
-                                <rect key="frame" x="163" y="442.5" width="88" height="21"/>
+                                <rect key="frame" x="163" y="132" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +38,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dO8-vO-UoA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Gwb-9O-hJY"/>
-                            <constraint firstItem="dO8-vO-UoA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TIF-rJ-wox"/>
+                            <constraint firstItem="dO8-vO-UoA" firstAttribute="top" secondItem="YAY-X9-WL6" secondAttribute="bottom" constant="8" symbolic="YES" id="DNM-Xw-dxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DZA-Uk-jWH" secondAttribute="trailing" constant="8" id="I04-ke-8ZU"/>
+                            <constraint firstItem="YAY-X9-WL6" firstAttribute="top" secondItem="DZA-Uk-jWH" secondAttribute="bottom" constant="8" id="VLY-7t-oSw"/>
+                            <constraint firstItem="DZA-Uk-jWH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="eow-OT-SM9"/>
+                            <constraint firstItem="DZA-Uk-jWH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="flH-OI-6Wc"/>
+                            <constraint firstItem="dO8-vO-UoA" firstAttribute="centerX" secondItem="YAY-X9-WL6" secondAttribute="centerX" id="gNC-dP-52O"/>
+                            <constraint firstItem="YAY-X9-WL6" firstAttribute="centerX" secondItem="DZA-Uk-jWH" secondAttribute="centerX" id="swT-mf-9tg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="dO8-vO-UoA" id="pMg-Fn-oAa"/>
+                        <outlet property="nameTextField" destination="DZA-Uk-jWH" id="qic-TQ-jsn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="119"/>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
